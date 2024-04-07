@@ -16,11 +16,13 @@ public class App {
         /*
          * STUDENTS NEED TO ADD/EDIT CODE STARTING HERE
          */
+
         answer.duplicate = 0;
         Set<Integer> seenNumbers = new HashSet<>();
         boolean isFound = false;
         int tempNumber = 0;
 
+        // checking if the first number in the array is the missing value
         if (countDown[0] < (countDown[1])) {
             answer.missing = countDown[1] + 1;
             isFound = true;
@@ -29,12 +31,14 @@ public class App {
         for (int i = 0; i < countDown.length; i++) {
             tempNumber = countDown[i];
 
+            // checking each element for the duplicate number
             if (seenNumbers.contains(tempNumber)) {
                 answer.duplicate = tempNumber;
             } else {
                 seenNumbers.add(tempNumber);
             }
 
+            // checking each element after the first for the missing value
             if ((i > 0) && (countDown[i] != (countDown[i - 1] - 1)) && (!isFound)) {
                 answer.missing = countDown[i - 1] - 1;
                 isFound = true;
