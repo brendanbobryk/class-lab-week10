@@ -17,8 +17,25 @@ public class App {
          * STUDENTS NEED TO ADD/EDIT CODE STARTING HERE
          */
 
-        answer.duplicate = -1;
-        answer.missing = -1;
+        int startingNumber = countDown[0];
+        int expectedSum = (startingNumber * (startingNumber + 1)) / 2;
+        int actualSum = 0;
+        answer.duplicate = 0;
+        Set<Integer> seenNumbers = new HashSet<>();
+
+        int tempNumber = 0;
+        for (int i = 0; i < startingNumber; i++) {
+            tempNumber = countDown[i];
+            actualSum += tempNumber;
+
+            if (seenNumbers.contains(tempNumber)) {
+                answer.duplicate = tempNumber;
+            } else {
+                seenNumbers.add(tempNumber);
+            }
+        }
+
+        answer.missing = expectedSum - actualSum;
 
         /*
          * STUDENTS DO NOT NEED TO EDIT ANY CODE AFTER THIS
