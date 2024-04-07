@@ -16,26 +16,31 @@ public class App {
         /*
          * STUDENTS NEED TO ADD/EDIT CODE STARTING HERE
          */
-
-        int startingNumber = countDown[0];
-        int expectedSum = (startingNumber * (startingNumber + 1)) / 2;
-        int actualSum = 0;
         answer.duplicate = 0;
         Set<Integer> seenNumbers = new HashSet<>();
-
+        boolean isFound = false;
         int tempNumber = 0;
-        for (int i = 0; i < startingNumber; i++) {
+
+        if (countDown[0] < (countDown[1])) {
+            answer.missing = countDown[1] + 1;
+            isFound = true;
+        }
+
+        for (int i = 0; i < countDown.length; i++) {
             tempNumber = countDown[i];
-            actualSum += tempNumber;
 
             if (seenNumbers.contains(tempNumber)) {
                 answer.duplicate = tempNumber;
             } else {
                 seenNumbers.add(tempNumber);
             }
-        }
 
-        answer.missing = expectedSum - actualSum;
+            if ((i > 0) && (countDown[i] != (countDown[i - 1] - 1)) && (!isFound)) {
+                answer.missing = countDown[i - 1] - 1;
+                isFound = true;
+            }
+
+        }
 
         /*
          * STUDENTS DO NOT NEED TO EDIT ANY CODE AFTER THIS
