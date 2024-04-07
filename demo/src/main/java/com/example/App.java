@@ -5,13 +5,7 @@ import java.util.*;
 
 public class App {
 
-    /*
-     * STUDENTS NEED TO CHANGE THE PATH TO POINT TO THE DATA FILE ON THEIR LAPTOPS
-     */
-    // private static String dataFilePath =
-    // "/Users/jerom/Documents/GitHub/class-java/stack-lab/demo/src/main/java/com/example/socksTestData.json";
-
-    private static String dataFilePath = "/Users/jerom/Documents/GitHub/class-java/set-lab/demo/src/main/java/com/example/rocketData.json";
+    private static String dataFilePath = "C:/Users/Brendan/Documents/GitHub/class-lab-week10/demo/src/main/java/com/example/rocketData.json";
 
     public static TestOutput process(TestInput input) {
         String rocketName = input.rocketName;
