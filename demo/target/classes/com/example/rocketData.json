@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "input": {
+        "rocketName": "Elrond",
+        "countDown": [8, 7, 6, 5, 3, 3, 2, 1]
+      },
+      "output": { "duplicate": 3, "missing": 4 }
+    },
+    {
+      "input": {
+        "rocketName": "Aragon",
+        "countDown": [6, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 6, "missing": 15 }
+    },
+    {
+      "input": {
+        "rocketName": "Tauriel",
+        "countDown": [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 3, 1]
+      },
+      "output": { "duplicate": 3, "missing": 2 }
+    },
+    {
+      "input": {
+        "rocketName": "Fredegar",
+        "countDown": [13, 12, 11, 10, 9, 8, 11, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 11, "missing": 7 }
+    },
+    {
+      "input": {
+        "rocketName": "Beregond",
+        "countDown": [14, 13, 12, 11, 10, 9, 8, 7, 6, 9, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 9, "missing": 5 }
+    },
+    {
+      "input": {
+        "rocketName": "Peregrin",
+        "countDown": [14, 1, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 1, "missing": 13 }
+    },
+    {
+      "input": {
+        "rocketName": "Gandalf",
+        "countDown": [1, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 1, "missing": 7 }
+    },
+    {
+      "input": {
+        "rocketName": "Boromir",
+        "countDown": [16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 16, 3, 2, 1]
+      },
+      "output": { "duplicate": 16, "missing": 4 }
+    },
+    {
+      "input": {
+        "rocketName": "Frodo",
+        "countDown": [13, 12, 11, 2, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 2, "missing": 10 }
+    },
+    {
+      "input": {
+        "rocketName": "Elendil",
+        "countDown": [11, 1, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+      },
+      "output": { "duplicate": 1, "missing": 10 }
+    }
+  ]
+}
